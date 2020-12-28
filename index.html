@@ -76,7 +76,7 @@
 
     <script type="text/javascript">
       let IMG_SIZE = 500;
-      let MAX_LINES = 4000;
+      let MAX_LINES = 40 // 4000;
       let N_PINS = 36 * 8;
       let MIN_LOOP = 20;
       let MIN_DISTANCE = 20;
@@ -436,9 +436,11 @@
        printLineSequenceTable = (lines) => {
         
          let temp = '';
+         let rows = 1;
        const html =  lines.map((line,index) => {
-         if(index === 0 ) temp += `<tr><td>${index + 1}</td>`
-          else if (index % 10 === 0) temp += `</tr><tr><td>${index + 1}</td>`;
+        
+         if(index === 0 ) temp += `<tr><td>${rows++}</td>`
+          else if (index % 10 === 0) temp += `</tr><tr><td>${rows++}</td>`;
             temp += `<td>${line}</td>`;
 
         })
