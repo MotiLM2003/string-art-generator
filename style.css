@@ -57,5 +57,10 @@ textarea {
 
 .caption,
 #drawStatus {
-  color: #fff;
+  padding: 5px;
+  text-align: center;
+  width: 500px;
+  color: #000;
+  margin: 1rem auto 1rem;
+  line-height: 2.2rem;
 }
