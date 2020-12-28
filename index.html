@@ -49,7 +49,12 @@
             <canvas class="centerCanvasLarge" id="canvasOutput2"></canvas>
           </div>
           <div id="showPins" class="inputoutput center hidden">
-            <textarea id="pinsOutput" rows="10" cols="100"></textarea>
+            <input type="hidden" id="pinsOutput" rows="10" cols="100"></input>
+            
+            <div  id="table-container">
+               
+            </div>
+            
           </div>
           <div id="incrementalDrawing" class="inputoutput center hidden">
             <div class="caption">Generisanje goblena:</div>
@@ -71,7 +76,7 @@
 
     <script type="text/javascript">
       let IMG_SIZE = 500;
-      let MAX_LINES = 4000; // 4000;
+      let MAX_LINES = 4000;
       let N_PINS = 36 * 8;
       let MIN_LOOP = 20;
       let MIN_DISTANCE = 20;
@@ -413,19 +418,36 @@
         let dsize = new cv.Size(IMG_SIZE * 2, IMG_SIZE * 2);
         let dst = new cv.Mat();
         cv.resize(result, dst, dsize, 0, 0, cv.INTER_AREA);
-
+        printLineSequenceTable(line_sequence)
         console.log('complete');
         drawStatus.textContent = MAX_LINES + ' nacrtanih linija | 100% gotovo';
 
         cv.imshow('canvasOutput2', dst);
-        console.log(line_sequence);
+      
         status.textContent = 'Complete';
         pinsOutput.value = line_sequence;
+      
         showPins.classList.remove('hidden');
         dst.delete();
         result.delete();
         window.scrollTo({ top: 5000, left: 0, behavior: 'smooth' });
       }
+
+       printLineSequenceTable = (lines) => {
+        
+         let temp = '';
+       const html =  lines.map((line,index) => {
+         if(index === 0 ) temp += `<tr><td>${index + 1}</td>`
+          else if (index % 10 === 0) temp += `</tr><tr><td>${index + 1}</td>`;
+            temp += `<td>${line}</td>`;
+
+        })
+
+        console.log('done', temp)
+        console.log(  document.getElementById('table-container'))
+        document.getElementById('table-container').innerHTML =   `<table>${temp}</table>`
+       console.log('after inner')
+      }   
 
       function getLineErr(arr, coords1, coords2) {
         let result = new Uint8Array(coords1.length);

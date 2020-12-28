@@ -1,6 +1,6 @@
 body {
   font-size: 1.6rem;
-  background-color: #232324;
+  /* background-color: #232324; */
   /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)); */
 }
 
@@ -44,6 +44,15 @@ body {
   border: 1px solid #fff;
 }
 
+table {
+  width: 100%;
+  color: #000;
+}
+table td {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
 @media screen and (max-width: 1200px) {
   .centerCanvasMedium,
   .centerCanvasLarge {
