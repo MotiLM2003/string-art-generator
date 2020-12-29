@@ -581,7 +581,7 @@ window.mobileCheck = function() {
 };
 
 
-if(mobileCheck()) {
+if(!mobileCheck()) {
   document.getElementById('work').style.display = 'none';
   document.getElementById('notwork').style.display = 'block';
 } else {
