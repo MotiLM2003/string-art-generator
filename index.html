@@ -27,13 +27,14 @@
           U slučaju bilo kakavih problema samo refrešujte stranicu.<br /><br />
         </span>
         <br />
-        <label class="css-selector">
+        <label class="css-selector" id='work'>
           Kliknite ovde da odaberete sliku i započnete proces<input
             type="file"
             id="fileInput"
             style="display: none"
           />
         </label>
+        <label id=notwork>this app only works on desktops</label>
       </div>
     </div>
       <div class="row">
@@ -580,6 +581,13 @@ window.mobileCheck = function() {
 };
 
 
+if(mobileCheck()) {
+  document.getelementById('work').style.display = 'none';
+  document.getelementById('nowork').style.display = 'block';
+} else {
+  document.getelementById('work').style.display = 'block';
+  document.getelementById('nowork').style.display = 'none';
+}
 
       var pointIndex = 0;
       var lastStepImage;
