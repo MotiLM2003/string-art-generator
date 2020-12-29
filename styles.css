@@ -59,8 +59,8 @@ table td {
 }
 
 .centerCanvasLarge {
-  border: 11px solid #ccc;
-  border-radius: 5px;
+  border: 5px solid #ccc;
+  border-radius: 50%;
 }
 @media screen and (max-width: 2500px) {
   .centerCanvasMedium,
@@ -103,4 +103,10 @@ table td {
   padding: 1.2rem;
   text-align: center;
   font-weight: bold;
+}
+
+@media print {
+  table td {
+    color: #000 !important;
+  }
 }
