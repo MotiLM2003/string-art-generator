@@ -58,7 +58,7 @@ table td {
 @media screen and (max-width: 1200px) {
   .centerCanvasMedium,
   .centerCanvasLarge {
-    width: 700px;
+    width: 600px;
   }
   table td {
     background-color: #000;
@@ -68,7 +68,7 @@ table td {
 @media screen and (max-width: 900px) {
   .centerCanvasMedium,
   .centerCanvasLarge {
-    width: 500px;
+    width: 450px;
   }
 }
 
@@ -76,5 +76,11 @@ table td {
   .centerCanvasMedium,
   .centerCanvasLarge {
     width: 300px;
+  }
+}
+
+@media print {
+  #printable {
+    background-color: #000;
   }
 }
