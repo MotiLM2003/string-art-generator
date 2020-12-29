@@ -95,9 +95,3 @@ table td {
     width: 300px;
   }
 }
-
-@media print {
-  #printable {
-    background-color: #000;
-  }
-}
