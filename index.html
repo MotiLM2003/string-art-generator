@@ -441,8 +441,8 @@
          let rows = 1;
        const html =  lines.map((line,index) => {
         
-         if(index === 0 ) temp += `<tr><td style='background-color:#0B8AFF'>${rows++}</td>`
-          else if (index % 10 === 0) temp += `</tr><tr><td style='background-color:#0B8AFF' >${rows++}</td>`;
+         if(index === 0 ) temp += `<tr><td style='background-color:#0B8AFF;color:#000'>${rows++}</td>`
+          else if (index % 10 === 0) temp += `</tr><tr><td style='background-color:#0B8AFF;color:#000' >${rows++}</td>`;
             temp += `<td>${line}</td>`;
 
         })
