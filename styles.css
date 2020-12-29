@@ -48,6 +48,8 @@ body {
 table {
   width: 100%;
   color: #000;
+  max-width: 420px;
+  margin: 0 auto;
 }
 table td {
   text-align: center;
@@ -55,6 +57,21 @@ table td {
   border: 1px solid #ccc;
   color: #fff;
 }
+
+.centerCanvasLarge {
+  border: 11px solid #ccc;
+  border-radius: 5px;
+}
+@media screen and (max-width: 2500px) {
+  .centerCanvasMedium,
+  .centerCanvasLarge {
+    width: 800px;
+  }
+  table td {
+    background-color: #000;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .centerCanvasMedium,
   .centerCanvasLarge {
