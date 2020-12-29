@@ -53,11 +53,15 @@ table td {
   text-align: center;
   padding: 1rem;
   border: 1px solid #ccc;
+  color:#fff; background;
 }
 @media screen and (max-width: 1200px) {
   .centerCanvasMedium,
   .centerCanvasLarge {
     width: 700px;
+  }
+  table td {
+    background-color: #000;
   }
 }
 
